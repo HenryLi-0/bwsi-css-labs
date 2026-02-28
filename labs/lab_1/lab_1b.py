@@ -49,7 +49,7 @@ def inputFloat(prompt:str) -> float:
     while True:
         try:
             return float(input(prompt))
-        except ValueError:
+        except:
             print("please input a number!")
 
 def inputOperation(prompt:str) -> float:

@@ -11,7 +11,7 @@ This is to simulate a change made on a robot: robot_speed = 5 # m/s
 def main():
     print("Hello World!")
 
-    name = "" # TODO: Insert your name between the double quotes
+    name = "henry li"
 
     print(f"{name}, Welcome to the CSS course!")
 

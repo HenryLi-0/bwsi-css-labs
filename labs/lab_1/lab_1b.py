@@ -71,7 +71,7 @@ def main():
 
     # Perform the calculation and display the result
     result = simple_calculator(operation, num1, num2)
-    print(f"The result of {operation if operation!=Operation.DIVIDE else "divid"}ing {num1} and {num2} is: {result}")
+    print("The result of {}ing {} and {} is: {}".format(operation if operation!=Operation.DIVIDE else "divid", num1, num2, result))
 
 
 if __name__ == "__main__":

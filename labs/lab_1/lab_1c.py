@@ -8,7 +8,6 @@ Do not assume anything. Account for all edge cases.
 Derived from LeetCode problem: https://leetcode.com/problems/maximum-subarray/ (leetcode medium)
 """
 
-# TODO: Find and resolve the bug in the following implementation. Create unit tests to verify your fix.
 def max_subarray_sum(nums: list[int]) -> int:
     """
     Function that takes in a list of integers and returns the maximum sum of any contiguous subarray.
@@ -20,11 +19,14 @@ def max_subarray_sum(nums: list[int]) -> int:
         int: The maximum sum of any contiguous subarray.
     """
 
+    if len(nums)==0: return 0
+    if len(nums)==1: return nums[0]
+
     max_current = max_global = nums[0]
     
-    for num in nums:
-        max_current = max(num, max_current + num)
-        if max_current < max_global:
+    for i in range(1, len(nums)):
+        max_current = max(nums[i], max_current + nums[i])
+        if max_current > max_global:
             max_global = max_current
             
     return max_global
